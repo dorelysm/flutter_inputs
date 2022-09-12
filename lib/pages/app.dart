@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:form/pages/textfield.dart';
-import 'package:form/pages/textformfield.dart';
 
+import 'textfield.dart';
+import 'textformfield.dart';
 import 'menu.dart';
+import 'auto.dart';
+import 'key.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
         //'/': (context) => Menu(),
         '/textfield': (context) => Textfield(),
         '/form':(context) => TextformField(),
+        '/auto':(context) => Auto(),
+        '/key':(context) => KeyB(),
       },
     );
   }
