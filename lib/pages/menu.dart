@@ -10,30 +10,33 @@ class Menu extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Text('Inputs en Flutter',
+              const Text(
+                'Inputs en Flutter',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               ElevatedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, '/textfield');
-                },
-              child: const Text('TextField')),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/textfield');
+                  },
+                  child: const Text('TextField')),
               ElevatedButton(
-                onPressed: (){
-                  Navigator.pushNamed(context, '/form');
-                }, 
-                child: const Text('TextFormField')),
-              ElevatedButton(onPressed: (){
-                Navigator.pushNamed(context, '/auto');
-              }, 
-              child: const Text('Autocomplete')),
-              ElevatedButton(onPressed: (){
-                Navigator.pushNamed(context, '/key');
-              }, 
-              child: const Text('RawKeyboardListener')),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/form');
+                  },
+                  child: const Text('Form')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/auto');
+                  },
+                  child: const Text('Autocomplete')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/key');
+                  },
+                  child: const Text('RawKeyboardListener')),
             ],
           ),
         ),

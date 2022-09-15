@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Auto extends StatefulWidget {
+  const Auto({super.key});
+
   @override
   State<Auto> createState() => _AutoState();
 }
 
 class _AutoState extends State<Auto> {
-    String? _selected;
+  String? _selected;
 
   final List<String> _sugerencias = [
     'Lunes',
@@ -27,19 +29,20 @@ class _AutoState extends State<Auto> {
       body: Column(
         children: [
           Autocomplete<String>(
-            optionsBuilder: (TextEditingValue value){
-              if (value.text.isEmpty){
-                return[];
+            optionsBuilder: (TextEditingValue value) {
+              if (value.text.isEmpty) {
+                return [];
               }
-              return _sugerencias.where((sugerencia) => sugerencia.toLowerCase().contains(value.text.toLowerCase()));
+              return _sugerencias.where((sugerencia) =>
+                  sugerencia.toLowerCase().contains(value.text.toLowerCase()));
             },
-            onSelected: (value){
+            onSelected: (value) {
               setState(() {
                 _selected = value;
               });
             },
-            ),
-            Text('Has seleccionado $_selected'),
+          ),
+          Text('Has seleccionado $_selected'),
         ],
       ),
     );
